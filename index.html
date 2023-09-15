@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap CDN Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title>Document</title>
+    <style>
+        .done {
+            color: green;
+            text-decoration: line-through black;
+        }
+
+        #list.hide-list {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
-    <ul>
-        <li>item 1</li>
-        <li>item 2</li>
-        <li>item 3</li>
-    </ul>
-    <script>
-        let htmlcollection = document.getElementsByTagName("li");
-        let nodelist = document.querySelectorAll('li');
+    <div class="container">
+        <section id="judul">
+            <p class="judul">JUDUL</p>
+        </section>
 
-        console.log(htmlcollection);
-        console.log(nodelist);
+        <section id="input">
 
-        let ulcontainer = document.querySelector('ul');
-        let linew = document.createElement("li");
-        linew.innerHTML="item baru";
+            <div class="row judul">
+                <div class="col-8">
 
-        ulcontainer.appendChild(linew);
-        console.log(htmlcollection);
-        console.log(linew);
+                    <input type="text" class="form-control" placeholder="Default Input" />
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+            </div>
+        </section>
+        <section id="list"></section>
+        <section id="hide"></section>
+    </div>
 
-    </script>
 </body>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
 </html>
